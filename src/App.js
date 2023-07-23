@@ -1,25 +1,37 @@
-import logo from './logo.svg';
 import './App.css';
+import Contact from './components/contact';
+import Blog from './components/blog';
+import Home from './components/home';
+import NotFound from './components/not-found';
+import Navbar from './components/layout/navbar';
+import Footer from './components/layout/footer';
+import Movie from './components/movie';
+import Todo from './components/todo';
+import UseEffectApi from './components/use-effect-api';
+import {
+  BrowserRouter,
+  Routes,
+  Route
+} from 'react-router-dom';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+      <BrowserRouter>
+       <Navbar />
+      <main className="grid min-h-full place-items-center bg-white px-6 py-24">
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/movie" element={<Movie />} />
+          <Route path="/todo" element={<Todo />} />
+          <Route path="/use-effect-api" element={<UseEffectApi />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+        </main>
+        <Footer />
+      </BrowserRouter>
+  )
+};
 
 export default App;
