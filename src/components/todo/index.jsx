@@ -7,8 +7,7 @@ const Todo = () => {
   const addTodo = () => {
     setData([...data, form]);
     setForm(form);
-    setForm({...form, todo: ''});
-    setForm({...form, notes: ''});
+    setForm({...form, todo: '', notes: ''});
   };
 
   const removeTodo = (index) => {

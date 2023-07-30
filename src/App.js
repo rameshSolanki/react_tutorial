@@ -8,6 +8,7 @@ import Footer from './components/layout/footer';
 import Movie from './components/movie';
 import Todo from './components/todo';
 import UseEffectApi from './components/use-effect-api';
+import UseEffectApiDetail from './components/use-effect-api-detail';
 import {
   BrowserRouter,
   Routes,
@@ -26,6 +27,7 @@ const App = () => {
           <Route path="/movie" element={<Movie />} />
           <Route path="/todo" element={<Todo />} />
           <Route path="/use-effect-api" element={<UseEffectApi />} />
+          <Route path="/use-effect-api/:products_id" element={<UseEffectApiDetail />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         </main>
