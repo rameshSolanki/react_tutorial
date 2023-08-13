@@ -9,6 +9,9 @@ import Movie from './components/movie';
 import Todo from './components/todo';
 import UseEffectApi from './components/use-effect-api';
 import UseEffectApiDetail from './components/use-effect-api-detail';
+import UseContextEX from './components/use-context-ex';
+import UseRefEX from './components/use-ref-ex';
+import UseReducerEx from './components/use-reducer-ex';
 import {
   BrowserRouter,
   Routes,
@@ -28,6 +31,9 @@ const App = () => {
           <Route path="/todo" element={<Todo />} />
           <Route path="/use-effect-api" element={<UseEffectApi />} />
           <Route path="/use-effect-api/:products_id" element={<UseEffectApiDetail />} />
+          <Route path="/use-context-ex" element={<UseContextEX />} />
+          <Route path="/use-ref-ex" element={<UseRefEX />} />
+          <Route path="/use-reducer-ex" element={<UseReducerEx />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         </main>

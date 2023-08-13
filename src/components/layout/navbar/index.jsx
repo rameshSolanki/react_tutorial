@@ -29,6 +29,18 @@ const menus = [
         label: 'useEffectApi',
         to: '/use-effect-api'
     },
+    {
+        label: 'UseContextEX',
+        to: '/use-context-ex'
+    },
+    {
+        label: 'UseRefEX',
+        to: '/use-ref-ex'
+    },
+    {
+        label: 'UseReducerEx',
+        to: '/use-reducer-ex'
+    },
 ];
 const Navbar = ()=> {
 
