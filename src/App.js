@@ -12,6 +12,7 @@ import UseEffectApiDetail from './components/use-effect-api-detail';
 import UseContextEX from './components/use-context-ex';
 import UseRefEX from './components/use-ref-ex';
 import UseReducerEx from './components/use-reducer-ex';
+import UseMemoEx from './components/use-memo-ex';
 import {
   BrowserRouter,
   Routes,
@@ -34,6 +35,7 @@ const App = () => {
           <Route path="/use-context-ex" element={<UseContextEX />} />
           <Route path="/use-ref-ex" element={<UseRefEX />} />
           <Route path="/use-reducer-ex" element={<UseReducerEx />} />
+          <Route path="/use-memo-ex" element={<UseMemoEx />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         </main>

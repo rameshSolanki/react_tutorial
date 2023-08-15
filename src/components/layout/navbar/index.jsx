@@ -41,6 +41,10 @@ const menus = [
         label: 'UseReducerEx',
         to: '/use-reducer-ex'
     },
+    {
+        label: 'UseMemoEx',
+        to: '/use-memo-ex'
+    },
 ];
 const Navbar = ()=> {
 

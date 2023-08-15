@@ -1,15 +1,17 @@
-import { useRef } from "react"
+import { useRef, useState } from "react";
 
 const UseRefEx = () => {
     let ref = useRef(0);
     let nameRef = useRef("test");
     let emailRef = useRef("");
-   
+    const [message, setMessage] = useState('');
+
     function handleSubmit(e) {
         e.preventDefault();
         ref.current = ref.current + 1;
         console.log(`Clicked ${ref.current} times`);
         console.log(`Entered name is ${nameRef.current.value} and Email is ${emailRef.current.value}`);
+        setMessage(`${ref.current} - Entered name is ${nameRef.current.value} and Email is ${emailRef.current.value}`);
     }
     return (
         <div>
@@ -23,6 +25,7 @@ const UseRefEx = () => {
 
                 <input className="flex items-start mb-4 text-white bg-blue-700 px-2" type="submit" />
             </form>
+            <p>{message}</p>
         </div>
     )
 }
